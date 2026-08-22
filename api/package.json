@@ -1,0 +1,14 @@
+{
+  "name": "teatapp-captcha-api",
+  "version": "1.0.0",
+  "description": "Bot-verification (CAPTCHA) code API for TeatApp's case-number search form",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>案件查詢 Case Search</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <div class="field">
+      <label for="case-number">
+        <span class="zh">案件編號：</span>
+        <span class="en">Case number</span>
+      </label>
+      <input id="case-number" type="text" value="260816I02818" />
+    </div>
+
+    <div class="field">
+      <label for="bot-code">
+        <span class="zh">我不是機器人驗證：</span>
+        <span class="en">I am not a robot</span>
+      </label>
+
+      <div class="field-content">
+        <div class="captcha-row">
+          <input id="bot-code" class="bot-code-input" type="text" maxlength="6" autocomplete="off" placeholder="Enter the code" />
+
+          <div class="captcha-image" id="captcha-image" aria-live="polite">
+            <span class="loading">…</span>
+          </div>
+
+          <button id="refresh-btn" class="btn btn-refresh" type="button">
+            <span class="zh">重新產生驗證碼</span>
+          </button>
+
+          <button id="search-btn" class="btn btn-search" type="button">
+            <span class="zh">查詢</span>
+            <span class="en">Search</span>
+          </button>
+        </div>
+
+        <p id="message" class="message" role="status"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
