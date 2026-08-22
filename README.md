@@ -5,21 +5,22 @@
 Recreates the case-number search form's "I am not a robot" verification
 widget as a small API + app pair.
 
-- `api/` — Express service that generates a 6-character verification code
-  as an SVG image (`GET /api/captcha`) and checks a submitted code
-  (`POST /api/captcha/verify`). Codes are single-use and expire after 5
-  minutes.
+- `api/` — ASP.NET Core (.NET 8) minimal API that generates a 6-character
+  verification code as an SVG image (`GET /api/captcha`) and checks a
+  submitted code (`POST /api/captcha/verify`). Codes are single-use and
+  expire after 5 minutes.
 - `app/` — Static frontend that reproduces the search form: case-number
   field, the verification-code image, a regenerate button, and a search
   button that verifies the typed code against the API.
 
 ### Run it
 
+Requires the [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
+
 ```bash
 # terminal 1 — API on http://localhost:4000
 cd api
-npm install
-npm start
+dotnet run
 
 # terminal 2 — app on http://localhost:8080
 cd app
